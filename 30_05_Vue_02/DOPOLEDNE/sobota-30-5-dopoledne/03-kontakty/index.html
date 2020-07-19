@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakty</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+
+  <body>
+    <h1>Kontakty</h1>
+
+    <div id="app">
+      <div class="prehled">
+        <div
+          class="osoba"
+          v-for="(person, index) in databaze"
+          v-on:click="selectPerson(index)"
+        >
+          <div class="jmeno">{{person.jmeno}}</div>
+          <div class="telefon">{{person.telefon}}</div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <img
+          class="foto"
+          v-bind:src="`images/${databaze[selected].foto}`"
+          v-bind:alt="databaze[selected].jmeno"
+        />
+
+        <h2>{{databaze[selected].jmeno}} ({{databaze[selected].vek}})</h2>
+
+        <p class="telefon">{{databaze[selected].telefon}}</p>
+        <p class="pozice">{{databaze[selected].pozice}}</p>
+
+        <p class="prace">
+          <span>
+            Hledá práci?
+            <p>{{databaze[selected].hledaPraci ? "ano" : "ne" }}</p></span
+          >
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

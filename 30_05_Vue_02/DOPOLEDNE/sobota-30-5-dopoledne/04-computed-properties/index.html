@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Počitadlo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <h1>Counter</h1>
+    <div id="app" class="container">
+      <p>{{number}}</p>
+      <div class="button">
+        <button v-on:click="increase">+</button>
+        <button v-on:click="decrease">-</button>
+        <button v-on:click="addFive">+5</button>
+      </div>
+      <p>Number squared: {{square}}</p>
+      <p>Number cubed: {{cube}}</p>
+
+      <p>{{number >= 37 ? "Yei, we got to 37" : "Not there yet."}}</p>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

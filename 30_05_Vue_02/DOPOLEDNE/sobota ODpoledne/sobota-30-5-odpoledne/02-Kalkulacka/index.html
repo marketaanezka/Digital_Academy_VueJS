@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Kalkulačka</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+
+
+	<h1>Kalkulačka</h1>
+	<div id="app" class="container">
+		<label for="numberOne">Insert first number
+		<input id="numberOne" type="number" v-model.number="number1"></label>
+		<label for="numberOne">Insert second number
+		<input id="numberTwo"  type="number" v-model.number="number2"></label>
+		<label for="operation">Select operation <select v-model="operator">
+			<option>+</option>
+			<option>-</option>
+			<option>/</option>
+			<option>*</option>
+		</select></label>
+	
+		<p>The result is {{sum}}</p>
+	</div>
+
+
+
+
+	<script src="index.js"></script>
+
+</body>
+</html>

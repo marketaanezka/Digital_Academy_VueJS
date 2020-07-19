@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Nákupní seznam</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="vue.js"></script>
+</head>
+<body>
+
+
+	<h1>Úkolníček</h1>
+
+	<div id="app">
+		<label> Add a task<input v-model.trim="newTask"></label>
+		<button v-on:click="addTask"> Add task</button>
+		<h3>Tasks</h3>
+		<ul> 
+			<li v-for="task in tasks">
+				{{task.name}}
+				
+			</li>
+		</ul>
+	</div>
+
+
+
+	<script src="index.js"></script>
+
+</body>
+</html>

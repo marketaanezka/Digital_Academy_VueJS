@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.tasks__container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.tasks__container {
+ background-color: #DAEEEF;
+ padding: 15px;
+}
+
+.tasks__list {
+background-color: #FCF2EC;
+border-radius: 10px;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+}
+
+button {
+  background-color: #92C9D5;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}

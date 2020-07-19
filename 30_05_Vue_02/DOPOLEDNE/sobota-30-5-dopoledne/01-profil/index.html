@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <img
+        v-bind:src="`img/${imgSrc}.jpg`"
+        v-bind:alt="imgAlt"
+        width="150px"
+        height="100px"
+      />
+      <!--do zdroje muzu dat jenom nazev obrazku, takhle jsem si pripravila tu cestu uz do html-->
+      <p>Name: {{name}}</p>
+      <p>About mne: {{about}}</p>
+      <ul>
+        <li v-for="musician in favMusicians">
+          {{musician}}
+        </li>
+      </ul>
+      <button v-on:click="showInfo">Click me</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

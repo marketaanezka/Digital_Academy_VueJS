@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kočka nebo pes</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="app" class="container">
+      <h1>Animal</h1>
+      <img v-bind:src="`images/${imgSrc}.jpg`" v-bind:alt="imgAlt" />
+      <p><span v-html="about"></span></p>
+      <div class="buttons">
+        <button v-on:click="showCat">Cat</button>
+        <button v-on:click="showDog">Dog</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
